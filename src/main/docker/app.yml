@@ -1,0 +1,13 @@
+version: '2'
+services:
+    esmeurexengine-app:
+        image: esmeurexengine
+        external_links:
+            - jhipster-registry:registry
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod
+            - SPRING_CLOUD_CONFIG_URI=http://admin:admin@registry:8761/config
+    jhipster-registry:
+        extends:
+            file: jhipster-registry.yml
+            service: jhipster-registry
