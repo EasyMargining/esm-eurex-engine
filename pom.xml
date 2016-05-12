@@ -15,32 +15,6 @@
     <packaging>war</packaging>
     <name>esmeurexengine</name>
 
-    <repositories>
-        <repository>
-            <id>spring-milestones</id>
-            <url>http://repo.spring.io/milestone</url>
-        </repository>
-        <repository>
-            <id>eurex-local-repository</id>
-            <name>Eurex Local repository</name>
-            <url>file://C://Homeware//workspace//easymargining//esm-eurex-engine//eurex-local-repository</url>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>spring-milestones</id>
-            <url>http://repo.spring.io/milestone</url>
-        </pluginRepository>
-        <pluginRepository>
-            <id>eurex-local-repository</id>
-            <url>file://C://Homeware//workspace//easymargining//esm-eurex-engine//eurex-local-repository</url>
-        </pluginRepository>
-    </pluginRepositories>
-
-    <prerequisites>
-        <maven>3.0.0</maven>
-    </prerequisites>
-
     <properties>
         <assertj-core.version>3.3.0</assertj-core.version>
         <awaitility.version>1.7.0</awaitility.version>
@@ -80,7 +54,36 @@
         <sonar.surefire.reportsPath>${project.testresult.directory}/surefire-reports</sonar.surefire.reportsPath>
         <sonar.tests>${project.basedir}/src/test/</sonar.tests>
         <lombok.version>1.16.8</lombok.version>
+
+        <opengamma-eurex.archive>${project.basedir}/../opengamma-eurex/pme-1.8.3_eurex-repository.zip</opengamma-eurex.archive>
+        <eurex-local-repository>${project.basedir}/../eurex-local-repository</eurex-local-repository>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <url>http://repo.spring.io/milestone</url>
+        </repository>
+        <repository>
+            <id>eurex-local-repository</id>
+            <name>Eurex Local repository</name>
+            <url>${eurex-local-repository}</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>spring-milestones</id>
+            <url>http://repo.spring.io/milestone</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>eurex-local-repository</id>
+            <url>${eurex-local-repository}</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <prerequisites>
+        <maven>3.0.0</maven>
+    </prerequisites>
 
     <dependencyManagement>
         <dependencies>
