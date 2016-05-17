@@ -1,6 +1,6 @@
 {
   "generator-jhipster": {
-    "jhipsterVersion": "3.2.1",
+    "jhipsterVersion": "3.3.0",
     "baseName": "esmeurexengine",
     "packageName": "com.easymargining",
     "packageFolder": "com/easymargining",
