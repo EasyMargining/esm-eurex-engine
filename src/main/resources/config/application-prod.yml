@@ -20,7 +20,7 @@ eureka:
         registerWithEureka: true
         fetchRegistry: true
         serviceUrl:
-            defaultZone: http://admin:admin@localhost:8761/eureka/
+            defaultZone: http://admin:admin@192.160.72.216:8761/eureka/
 
 spring:
     devtools:
