@@ -6,7 +6,7 @@ spring:
     cloud:
         config:
             fail-fast: true
-            uri: http://admin:admin@192.160.72.216:8761/config
+            uri: http://admin:admin@127.0.0.1:8761/config
             # name of the config server's property source (file.yml) that we want to use
             name: esmeurexengine
             profile: dev # profile(s) of the property source
