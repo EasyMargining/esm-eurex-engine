@@ -20,7 +20,7 @@ eureka:
         registerWithEureka: true
         fetchRegistry: true
         serviceUrl:
-            defaultZone: http://admin:admin@127.0.0.1:8761/eureka/
+            defaultZone: http://admin:admin@192.160.67.197:8761/eureka/
 
 spring:
     devtools:
@@ -84,5 +84,5 @@ jhipster:
 # Esm-gateway specific properties
 # ===================================================================
 marketdata:
-    valuationdate: 2015-06-03
-    directory: C:\\HOMEWARE\\pme\\marketdata
+    valuationdate : 2015-11-27
+    directory : /home/esmuat01/data/eurex/marketdata

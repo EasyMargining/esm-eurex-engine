@@ -2,6 +2,7 @@ package com.easymargining.web.rest.errors;
 
 import java.util.List;
 
+import com.opengamma.DataNotFoundException;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -58,6 +59,13 @@ public class ExceptionTranslator {
     @ResponseStatus(HttpStatus.METHOD_NOT_ALLOWED)
     public ErrorDTO processMethodNotSupportedException(HttpRequestMethodNotSupportedException exception) {
         return new ErrorDTO(ErrorConstants.ERR_METHOD_NOT_SUPPORTED, exception.getMessage());
+    }
+
+    @ExceptionHandler(DataNotFoundException.class)
+    @ResponseBody
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ErrorDTO processDataNotFound(DataNotFoundException exception) {
+        return new ErrorDTO(ErrorConstants.ERR_DATA_NOT_FOUND, exception.getMessage());
     }
 
     @ExceptionHandler(Exception.class)
